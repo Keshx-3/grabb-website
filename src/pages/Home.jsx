@@ -1,14 +1,21 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import { Store, Truck, ShieldCheck, Award, ArrowRight } from 'lucide-react';
 import FeaturedCarousel from '../components/FeaturedCarousel';
+import DownloadModal from '../components/DownloadModal';
 import categoriesData from '../data/categories.json';
 import vendorsData from '../data/vendors.json';
 import './Home.css';
 
 export default function Home() {
-  const navigate = useNavigate();
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [downloadContext, setDownloadContext] = useState('');
+
+  const triggerDownloadModal = (message) => {
+    setDownloadContext(message);
+    setIsDownloadOpen(true);
+  };
 
   // Helper to dynamically render Lucide icons
   const renderIcon = (iconName, size = 24) => {
@@ -17,7 +24,12 @@ export default function Home() {
   };
 
   const handleCategoryClick = (catId) => {
-    navigate(`/explore?category=${catId}`);
+    const category = categoriesData.find(c => c.id === catId);
+    triggerDownloadModal(`Download the Grabb app to browse ${category ? category.name : 'this category'} at neighborhood counters!`);
+  };
+
+  const handleVendorClick = (vendor) => {
+    triggerDownloadModal(`Download the Grabb app to browse the full catalog of ${vendor.name} and order fresh daily!`);
   };
 
   return (
@@ -35,10 +47,13 @@ export default function Home() {
               Unlike generic quick-commerce platforms that route your food and goods through anonymous dark warehouses, Grabb puts your neighborhood store owners front and center. Order directly from the shopkeepers you know and trust, and we'll handle the delivery.
             </p>
             <div className="hero-ctas">
-              <Link to="/explore" className="btn btn-primary">
-                Explore Local Shops
+              <button 
+                onClick={() => triggerDownloadModal('To browse local stores, download the Grabb app on your mobile device.')} 
+                className="btn btn-primary"
+              >
+                Download the App
                 <ArrowRight size={18} />
-              </Link>
+              </button>
               <Link to="/become-a-vendor" className="btn btn-outline">
                 Become a Partner Shop
               </Link>
@@ -174,7 +189,7 @@ export default function Home() {
       {/* Featured Carousel */}
       <section className="featured-vendors-section">
         <div className="container">
-          <FeaturedCarousel vendors={vendorsData} />
+          <FeaturedCarousel vendors={vendorsData} onVendorClick={handleVendorClick} />
         </div>
       </section>
 
@@ -212,6 +227,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <DownloadModal isOpen={isDownloadOpen} onClose={() => setIsDownloadOpen(false)} contextText={downloadContext} />
     </div>
   );
 }

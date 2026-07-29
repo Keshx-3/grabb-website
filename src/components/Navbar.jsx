@@ -41,9 +41,6 @@ export default function Navbar() {
           <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
             Home
           </NavLink>
-          <NavLink to="/explore" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            Explore Shops
-          </NavLink>
           <NavLink to="/how-it-works" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             How It Works
           </NavLink>
@@ -77,9 +74,6 @@ export default function Navbar() {
           <div className="mobile-drawer-links">
             <NavLink to="/" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`} end>
               Home
-            </NavLink>
-            <NavLink to="/explore" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`}>
-              Explore Shops
             </NavLink>
             <NavLink to="/how-it-works" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`}>
               How It Works

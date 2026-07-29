@@ -6,8 +6,6 @@ import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
-import Explore from './pages/Explore';
-import VendorStorefront from './pages/VendorStorefront';
 import BecomeVendor from './pages/BecomeVendor';
 import HowItWorks from './pages/HowItWorks';
 import About from './pages/About';
@@ -23,11 +21,6 @@ function TitleUpdater() {
     
     if (pathname === '/') {
       title = 'Grabb — Shop Local. Delivered.';
-    } else if (pathname === '/explore') {
-      title = 'Explore Local Shops | Grabb';
-    } else if (pathname.startsWith('/vendor/')) {
-      // The VendorStorefront component sets its own title dynamically
-      return;
     } else if (pathname === '/become-a-vendor') {
       title = 'Become a Partner Shop | Grabb';
     } else if (pathname === '/how-it-works') {
@@ -60,8 +53,6 @@ export default function App() {
         <div className="main-content" style={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/vendor/:id" element={<VendorStorefront />} />
             <Route path="/become-a-vendor" element={<BecomeVendor />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/about" element={<About />} />

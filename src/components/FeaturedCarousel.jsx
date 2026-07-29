@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import VendorCard from './VendorCard';
 import './FeaturedCarousel.css';
 
-export default function FeaturedCarousel({ vendors }) {
+export default function FeaturedCarousel({ vendors, onVendorClick }) {
   const scrollRef = useRef(null);
 
   // Filter only featured vendors
@@ -47,7 +47,7 @@ export default function FeaturedCarousel({ vendors }) {
         <div className="carousel-track">
           {featuredVendors.map((vendor) => (
             <div key={vendor.id} className="carousel-slide">
-              <VendorCard vendor={vendor} />
+              <VendorCard vendor={vendor} onClick={() => onVendorClick(vendor)} />
             </div>
           ))}
         </div>

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, Globe, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import DownloadModal from './DownloadModal';
 import './Footer.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
 
   return (
     <footer className="footer">
@@ -37,7 +39,14 @@ export default function Footer() {
         <div className="footer-col">
           <h3>For Customers</h3>
           <ul className="footer-links">
-            <li><Link to="/explore">Explore Local Shops</Link></li>
+            <li>
+              <button 
+                onClick={() => setIsDownloadOpen(true)} 
+                className="footer-download-btn"
+              >
+                Download the App
+              </button>
+            </li>
             <li><Link to="/how-it-works">How It Works</Link></li>
             <li><Link to="/faq">FAQs</Link></li>
             <li><Link to="/contact">Support & Help</Link></li>
@@ -83,6 +92,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <DownloadModal isOpen={isDownloadOpen} onClose={() => setIsDownloadOpen(false)} />
     </footer>
   );
 }

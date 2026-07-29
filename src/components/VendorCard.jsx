@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Star, MapPin, CheckCircle2 } from 'lucide-react';
 import './VendorCard.css';
 
-export default function VendorCard({ vendor }) {
+export default function VendorCard({ vendor, onClick }) {
   const { id, name, category, area, tagline, rating, reviewsCount, image, verified } = vendor;
 
   // Format category label
@@ -20,7 +19,7 @@ export default function VendorCard({ vendor }) {
   };
 
   return (
-    <Link to={`/vendor/${id}`} className="vendor-card reveal">
+    <div onClick={onClick} className="vendor-card reveal" style={{ cursor: 'pointer' }}>
       <div className="card-image-wrapper">
         <img src={image} alt={name} loading="lazy" className="card-image" />
         <span className="card-category-badge badge badge-primary">{formatCategory(category)}</span>
@@ -45,9 +44,9 @@ export default function VendorCard({ vendor }) {
         <p className="card-tagline">{tagline}</p>
         <div className="card-footer">
           <span className="card-reviews">{reviewsCount} reviews</span>
-          <span className="card-cta-text">View Shop &rarr;</span>
+          <span className="card-cta-text">Browse Products &rarr;</span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
