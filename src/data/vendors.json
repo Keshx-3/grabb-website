@@ -1,0 +1,262 @@
+[
+  {
+    "id": "gupta-provisions",
+    "name": "Gupta Provisions & Grocery",
+    "owner": "Ramesh Gupta",
+    "category": "grocery",
+    "area": "Koramangala",
+    "tagline": "Hand-milled flour and organic spices since 1994.",
+    "rating": 4.8,
+    "reviewsCount": 142,
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+    "story": "Ramesh started Gupta Provisions with a single sack of basmati rice in 1994. Today, he knows almost every household in the block by name. He sources hand-milled flours directly from Karnataka farmers and blends his own garam masala, ensuring your family gets the most authentic, chemical-free spices.",
+    "address": "Shop #24, 5th Cross, 4th Block, Koramangala, Bengaluru",
+    "phone": "+91 98765 43210",
+    "whatsapp": "919876543210",
+    "verified": true,
+    "featured": true,
+    "products": [
+      {
+        "id": "p1",
+        "name": "Organic Garam Masala (House Blend)",
+        "price": 120,
+        "unit": "200g",
+        "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p2",
+        "name": "Premium Basmati Rice",
+        "price": 140,
+        "unit": "1kg",
+        "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p3",
+        "name": "Pure Cold Pressed Mustard Oil",
+        "price": 210,
+        "unit": "1L",
+        "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p4",
+        "name": "Stone-ground Whole Wheat Atta",
+        "price": 280,
+        "unit": "5kg",
+        "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  },
+  {
+    "id": "daily-crumb",
+    "name": "The Daily Crumb Bakery",
+    "owner": "Maria D'Souza",
+    "category": "bakery",
+    "area": "Indiranagar",
+    "tagline": "Traditional sourdough and legacy pastries.",
+    "rating": 4.9,
+    "reviewsCount": 89,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+    "story": "Maria learned baking from her grandmother in Goa before moving to Bengaluru. At The Daily Crumb, everything is slow-fermented over 24 hours. She refuses to use commercial yeast or artificial preservatives, maintaining a wild sourdough starter that has been alive for over seven years.",
+    "address": "12-B, 100 Feet Road, Indiranagar, Bengaluru",
+    "phone": "+91 98765 88990",
+    "whatsapp": "919876588990",
+    "verified": true,
+    "featured": true,
+    "products": [
+      {
+        "id": "p5",
+        "name": "Artisanal Sourdough Bread",
+        "price": 180,
+        "unit": "500g",
+        "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p6",
+        "name": "Butter Croissant (Pack of 2)",
+        "price": 160,
+        "unit": "Pack",
+        "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p7",
+        "name": "Fudgy Chocolate Brownies",
+        "price": 90,
+        "unit": "Piece",
+        "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p8",
+        "name": "Fresh Blueberry Muffin",
+        "price": 85,
+        "unit": "Piece",
+        "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  },
+  {
+    "id": "lifecare-chemist",
+    "name": "LifeCare Chemist & Wellness",
+    "owner": "Dr. Amit Sharma",
+    "category": "pharmacy",
+    "area": "HSR Layout",
+    "tagline": "Your reliable neighborhood healthcare companion.",
+    "rating": 4.7,
+    "reviewsCount": 210,
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d304d3b24?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400",
+    "story": "Dr. Amit believes in healthcare beyond prescriptions. Operating in HSR Layout for over a decade, LifeCare is known for stocks of rare medications and prompt personal guidance. Amit keeps a record of chronic patient schedules to proactively remind them about their refills.",
+    "address": "Plot #452, Sector 3, HSR Layout, Bengaluru",
+    "phone": "+91 98765 11223",
+    "whatsapp": "919876511223",
+    "verified": true,
+    "featured": false,
+    "products": [
+      {
+        "id": "p9",
+        "name": "Organic Herbal Cough Syrup",
+        "price": 115,
+        "unit": "100ml",
+        "image": "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p10",
+        "name": "Multivitamin Wellness Capsules",
+        "price": 350,
+        "unit": "60 Caps",
+        "image": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p11",
+        "name": "First-Aid Essential Kit",
+        "price": 250,
+        "unit": "1 Unit",
+        "image": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  },
+  {
+    "id": "threads-india",
+    "name": "Threads of India Boutique",
+    "owner": "Priya Nair",
+    "category": "boutique",
+    "area": "Jayanagar",
+    "tagline": "Hand-spun cotton wear and local craft artifacts.",
+    "rating": 4.6,
+    "reviewsCount": 64,
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
+    "story": "Priya established Threads of India to support weavers across rural Karnataka and Andhra. Every saree, kurta, and hand-embroidered bag on her shelves has a story of weavers who spent days on handlooms. She keeps the dying craft alive right in the heart of Jayanagar.",
+    "address": "Dukan #5, Shopping Complex, 4th Block, Jayanagar, Bengaluru",
+    "phone": "+91 98765 55443",
+    "whatsapp": "919876555443",
+    "verified": true,
+    "featured": true,
+    "products": [
+      {
+        "id": "p12",
+        "name": "Handloom Cotton Kurta",
+        "price": 950,
+        "unit": "Piece",
+        "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p13",
+        "name": "Siddipet Handwoven Saree",
+        "price": 2400,
+        "unit": "Piece",
+        "image": "https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p14",
+        "name": "Handmade Khadi Tote Bag",
+        "price": 350,
+        "unit": "Piece",
+        "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  },
+  {
+    "id": "elite-stationery",
+    "name": "Elite Stationery & Art",
+    "owner": "Vikram Roy",
+    "category": "stationery",
+    "area": "Indiranagar",
+    "tagline": "Quality books, stationery, and premium art supplies.",
+    "rating": 4.8,
+    "reviewsCount": 112,
+    "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+    "story": "Vikram's store is a sanctuary for local students and artists. Having set up shop in Indiranagar in 2002, Elite Stationery goes beyond simple pens to stocking high-grade heavy canvases, imported watercolors, and hard-to-find architecture templates.",
+    "address": "Shop #88, Double Road, Indiranagar, Bengaluru",
+    "phone": "+91 98765 77665",
+    "whatsapp": "919876577665",
+    "verified": false,
+    "featured": false,
+    "products": [
+      {
+        "id": "p15",
+        "name": "Handmade Leather Sketchbook",
+        "price": 450,
+        "unit": "A5 Size",
+        "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p16",
+        "name": "Premium Watercolor Paint Set",
+        "price": 850,
+        "unit": "18 Colors",
+        "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p17",
+        "name": "Eco-friendly Recycled Pens",
+        "price": 120,
+        "unit": "Pack of 5",
+        "image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  },
+  {
+    "id": "farm-to-table",
+    "name": "Farm-to-Table Veggies",
+    "owner": "K. Gowda",
+    "category": "produce",
+    "area": "Koramangala",
+    "tagline": "Fresh morning harvests direct from local fields.",
+    "rating": 4.9,
+    "reviewsCount": 204,
+    "image": "https://images.unsplash.com/photo-1573244514396-9017b88fd44e?auto=format&fit=crop&q=80&w=800",
+    "ownerPhoto": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=400",
+    "story": "Gowda drives his pickup truck to Bengaluru Outskirts at 3:00 AM every single day to pick fresh gourds, crisp spinach, and tender carrots from family farms. By 7:00 AM, they are sorted at his Koramangala store. It is the shortest route between the soil and your plate.",
+    "address": "Booth #2, BBMP Market, Koramangala 8th Block, Bengaluru",
+    "phone": "+91 98765 99001",
+    "whatsapp": "919876599001",
+    "verified": true,
+    "featured": true,
+    "products": [
+      {
+        "id": "p18",
+        "name": "Organic Vine-ripe Tomatoes",
+        "price": 40,
+        "unit": "1kg",
+        "image": "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p19",
+        "name": "Crisp Local Spinach (Palak)",
+        "price": 20,
+        "unit": "Bunch",
+        "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&q=80&w=300"
+      },
+      {
+        "id": "p20",
+        "name": "Fresh Sweet Baby Carrots",
+        "price": 60,
+        "unit": "500g",
+        "image": "https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&q=80&w=300"
+      }
+    ]
+  }
+]

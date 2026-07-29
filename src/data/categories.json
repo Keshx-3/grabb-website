@@ -1,0 +1,38 @@
+[
+  {
+    "id": "grocery",
+    "name": "Grocery & Staples",
+    "icon": "ShoppingBag",
+    "description": "Daily essentials, direct from neighborhood family-run kirana stores."
+  },
+  {
+    "id": "bakery",
+    "name": "Bakery & Sweets",
+    "icon": "Croissant",
+    "description": "Oven-fresh bread, pastries, and traditional sweets from legacy bakers."
+  },
+  {
+    "id": "pharmacy",
+    "name": "Pharmacy & Care",
+    "icon": "Pills",
+    "description": "Over-the-counter wellness products and prescriptions from trusted local chemists."
+  },
+  {
+    "id": "boutique",
+    "name": "Boutique & Crafts",
+    "icon": "Shirt",
+    "description": "Unique apparel, local handloom crafts, and artisanal wear."
+  },
+  {
+    "id": "stationery",
+    "name": "Books & Stationery",
+    "icon": "BookOpen",
+    "description": "Art supplies, notebooks, textbooks, and office requirements."
+  },
+  {
+    "id": "produce",
+    "name": "Fresh Fruits & Veg",
+    "icon": "Apple",
+    "description": "Morning-harvested vegetables and fresh fruits from local vendors."
+  }
+]

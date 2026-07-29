@@ -1,0 +1,117 @@
+.faq-page {
+  padding-top: 100px;
+  padding-bottom: var(--spacing-xl);
+  min-height: 80vh;
+}
+
+.faq-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.faq-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-hero p {
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.faq-tab-btn {
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.faq-tab-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(31, 111, 178, 0.2);
+}
+
+.faq-accordion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-accordion-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-bg-ice);
+  transition: all var(--transition-fast);
+}
+
+.faq-accordion-item:hover {
+  border-color: var(--color-accent);
+}
+
+.faq-accordion-header {
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--color-white);
+}
+
+.faq-accordion-header h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.faq-accordion-arrow {
+  color: var(--color-primary);
+  transition: transform var(--transition-fast);
+}
+
+.faq-accordion-item.open .faq-accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal) ease-out, padding var(--transition-normal) ease-out;
+}
+
+.faq-accordion-item.open .faq-accordion-content {
+  padding: 1.2rem;
+  max-height: 250px; /* arbitrary max height for transition */
+  border-top: 1px solid rgba(22, 50, 79, 0.05);
+}
+
+.faq-accordion-content p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .faq-hero h1 {
+    font-size: 2.2rem;
+  }
+}

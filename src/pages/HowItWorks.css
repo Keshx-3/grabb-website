@@ -1,0 +1,188 @@
+.how-it-works-page {
+  padding-top: 100px;
+  padding-bottom: var(--spacing-xl);
+}
+
+.how-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.how-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.how-hero p {
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tabs for Buyer vs Vendor Journeys */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.tab-btn {
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.tab-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(31, 111, 178, 0.2);
+}
+
+/* Journey Grid styling */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.journey-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.journey-step {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.journey-num {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(31, 111, 178, 0.15);
+}
+
+.journey-step-text h3 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.journey-step-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.journey-visual-wrapper {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.journey-img-container {
+  height: 340px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.journey-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Delivery Comparison Block */
+.delivery-comparison-section {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.comparison-table-wrapper {
+  margin-top: var(--spacing-lg);
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: var(--color-white);
+  font-size: 0.95rem;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: var(--color-bg-ice);
+}
+
+.check-icon-good {
+  color: var(--color-success);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.cross-icon-bad {
+  color: var(--color-error);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  .journey-visual-wrapper {
+    order: -1; /* visual on top on mobile */
+  }
+  .journey-img-container {
+    height: 250px;
+  }
+}
+@media (max-width: 600px) {
+  .how-hero h1 {
+    font-size: 2.2rem;
+  }
+}
