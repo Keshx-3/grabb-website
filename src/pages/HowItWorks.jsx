@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { Check, X, ShieldAlert, ShoppingBag, Eye, HeartHandshake, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Check, X } from 'lucide-react';
 import './HowItWorks.css';
 
 export default function HowItWorks() {
-  const [activeTab, setActiveTab] = useState('buyer');
-
   return (
     <div className="how-it-works-page">
       {/* Hero Section */}
@@ -16,125 +14,57 @@ export default function HowItWorks() {
         </p>
       </section>
 
-      {/* Tabs */}
-      <div className="tab-container reveal">
-        <button 
-          className={`tab-btn ${activeTab === 'buyer' ? 'active' : ''}`}
-          onClick={() => setActiveTab('buyer')}
-        >
-          For Buyers / Customers
-        </button>
-        <button 
-          className={`tab-btn ${activeTab === 'vendor' ? 'active' : ''}`}
-          onClick={() => setActiveTab('vendor')}
-        >
-          For Shopkeepers / Vendors
-        </button>
-      </div>
-
       {/* Journey Walkthrough Section */}
       <section className="container">
-        {activeTab === 'buyer' ? (
-          <div className="journey-grid reveal">
-            <div className="journey-content">
-              <h2>The Buyer Journey</h2>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', marginBottom: '1rem' }}>
-                Getting items from your favorite street corner shop has never been this simple.
-              </p>
+        <div className="journey-grid reveal">
+          <div className="journey-content">
+            <h2>The Buyer Journey</h2>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', marginBottom: '1rem' }}>
+              Getting items from your favorite street corner shop has never been this simple.
+            </p>
 
-              <div className="journey-step">
-                <span className="journey-num">1</span>
-                <div className="journey-step-text">
-                  <h3>Browse Local Shops</h3>
-                  <p>Filter by categories like bakeries, groceries, or pharmacies, and find verified merchants operating in your neighborhood.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">2</span>
-                <div className="journey-step-text">
-                  <h3>Build Your Catalog List</h3>
-                  <p>Add specific items from the merchant's real catalog to your order list, estimating your pricing totals immediately.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">3</span>
-                <div className="journey-step-text">
-                  <h3>Route to Shop Counter</h3>
-                  <p>Send your list directly to the shopkeeper's WhatsApp counter or submit it to our system. The shopkeeper confirms stock levels instantly.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">4</span>
-                <div className="journey-step-text">
-                  <h3>Rider Doorstep Delivery</h3>
-                  <p>A Grabb delivery rider retrieves your packages straight from the shopkeeper's desk and brings it to your door in 30 minutes.</p>
-                </div>
+            <div className="journey-step">
+              <span className="journey-num">1</span>
+              <div className="journey-step-text">
+                <h3>Browse Local Shops</h3>
+                <p>Open the Grabb app to see verified merchants operating in your immediate neighborhood.</p>
               </div>
             </div>
 
-            <div className="journey-visual-wrapper">
-              <div className="journey-img-container">
-                <img 
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800" 
-                  alt="Customer receiving local goods" 
-                />
+            <div className="journey-step">
+              <span className="journey-num">2</span>
+              <div className="journey-step-text">
+                <h3>Build Your Catalog List</h3>
+                <p>Add specific items from the merchant's real catalog to your order list, estimating your pricing totals immediately.</p>
+              </div>
+            </div>
+
+            <div className="journey-step">
+              <span className="journey-num">3</span>
+              <div className="journey-step-text">
+                <h3>Route to Shop Counter</h3>
+                <p>Send your list directly to the shopkeeper's counter. The shopkeeper confirms stock levels and picks items instantly.</p>
+              </div>
+            </div>
+
+            <div className="journey-step">
+              <span className="journey-num">4</span>
+              <div className="journey-step-text">
+                <h3>Rider Doorstep Delivery</h3>
+                <p>A Grabb delivery rider retrieves your packages straight from the shopkeeper's desk and brings it to your door in 30 minutes.</p>
               </div>
             </div>
           </div>
-        ) : (
-          <div className="journey-grid reveal">
-            <div className="journey-content">
-              <h2>The Vendor Journey</h2>
-              <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', marginBottom: '1rem' }}>
-                Take your business digital without sacrificing your identity or paying high platform fees.
-              </p>
 
-              <div className="journey-step">
-                <span className="journey-num">1</span>
-                <div className="journey-step-text">
-                  <h3>Submit Online Profile</h3>
-                  <p>Apply in 5 minutes with basic shop details, operating areas, and lists of products you sell.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">2</span>
-                <div className="journey-step-text">
-                  <h3>Onsite Verification</h3>
-                  <p>A Grabb agent schedules a brief visit to verify your physical address, ensuring customer trust is maintained.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">3</span>
-                <div className="journey-step-text">
-                  <h3>Catalog Digitization</h3>
-                  <p>We do the heavy lifting of uploading product names, prices, units, and clear catalog images onto your public page.</p>
-                </div>
-              </div>
-
-              <div className="journey-step">
-                <span className="journey-num">4</span>
-                <div className="journey-step-text">
-                  <h3>Pack and Hand Over</h3>
-                  <p>Accept order requests, pack the items at your counter, and hand the package to the Grabb rider who arrives automatically.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="journey-visual-wrapper">
-              <div className="journey-img-container">
-                <img 
-                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800" 
-                  alt="Merchant packing fresh bread" 
-                />
-              </div>
+          <div className="journey-visual-wrapper">
+            <div className="journey-img-container">
+              <img 
+                src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800" 
+                alt="Customer receiving local goods" 
+              />
             </div>
           </div>
-        )}
+        </div>
       </section>
 
       {/* Delivery Comparison Section */}

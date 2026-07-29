@@ -7,7 +7,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
   gap: var(--spacing-lg);
   padding-bottom: var(--spacing-xl);
 }

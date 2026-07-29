@@ -53,16 +53,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Vendor Links */}
-        <div className="footer-col">
-          <h3>For Shopkeepers</h3>
-          <ul className="footer-links">
-            <li><Link to="/become-a-vendor">Become a Vendor</Link></li>
-            <li><Link to="/become-a-vendor#benefits">Onboarding Benefits</Link></li>
-            <li><Link to="/become-a-vendor#faq">Vendor FAQs</Link></li>
-          </ul>
-        </div>
-
         {/* Contact Info Column */}
         <div className="footer-col contact-col">
           <h3>Get In Touch</h3>

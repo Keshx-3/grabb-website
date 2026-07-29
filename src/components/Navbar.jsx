@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingBag } from 'lucide-react';
+import DownloadModal from './DownloadModal';
 import './Navbar.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -47,15 +49,12 @@ export default function Navbar() {
           <NavLink to="/about" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             About Us
           </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            Contact
-          </NavLink>
         </div>
 
         <div className="nav-cta">
-          <Link to="/become-a-vendor" className="btn btn-primary nav-btn">
-            Become a Vendor
-          </Link>
+          <button onClick={() => setIsDownloadOpen(true)} className="btn btn-primary nav-btn">
+            Download App
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -81,15 +80,13 @@ export default function Navbar() {
             <NavLink to="/about" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`}>
               About Us
             </NavLink>
-            <NavLink to="/contact" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`}>
-              Contact
-            </NavLink>
-            <Link to="/become-a-vendor" className="btn btn-primary mobile-cta-btn">
-              Become a Vendor
-            </Link>
+            <button onClick={() => { setIsOpen(false); setIsDownloadOpen(true); }} className="btn btn-primary mobile-cta-btn">
+              Download App
+            </button>
           </div>
         </div>
       )}
+      <DownloadModal isOpen={isDownloadOpen} onClose={() => setIsDownloadOpen(false)} />
     </nav>
   );
 }
