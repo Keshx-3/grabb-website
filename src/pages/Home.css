@@ -140,8 +140,8 @@
 /* Grabb Logo in Bottom Right of Hero */
 .hero-corner-logo {
   position: absolute;
-  bottom: 3.9rem;
-  right: 5.5rem;
+  bottom: 2rem;
+  right: 3rem;
   width: 190px;
   /* Increased from 120px */
   height: auto;
