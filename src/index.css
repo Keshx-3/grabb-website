@@ -223,6 +223,16 @@ button, input, select, textarea {
   color: var(--color-success);
 }
 
+.section-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
 /* Section transitions and reveals */
 .reveal {
   opacity: 0;

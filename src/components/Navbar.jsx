@@ -28,8 +28,10 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location]);
 
+  const isHomePage = location.pathname === '/';
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isOpen ? 'menu-open' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isOpen ? 'menu-open' : ''} ${isHomePage ? 'navbar-home' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="nav-logo">
           <div className="logo-icon">
@@ -51,11 +53,13 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        <div className="nav-cta">
-          <button onClick={() => setIsDownloadOpen(true)} className="btn btn-primary nav-btn">
-            Download App
-          </button>
-        </div>
+        {!isHomePage && (
+          <div className="nav-cta">
+            <button onClick={() => setIsDownloadOpen(true)} className="btn btn-primary nav-btn">
+              Download App
+            </button>
+          </div>
+        )}
 
         {/* Mobile Toggle */}
         <button 
@@ -80,9 +84,11 @@ export default function Navbar() {
             <NavLink to="/about" className={({ isActive }) => `mobile-nav-item ${isActive ? 'active' : ''}`}>
               About Us
             </NavLink>
-            <button onClick={() => { setIsOpen(false); setIsDownloadOpen(true); }} className="btn btn-primary mobile-cta-btn">
-              Download App
-            </button>
+            {!isHomePage && (
+              <button onClick={() => { setIsOpen(false); setIsDownloadOpen(true); }} className="btn btn-primary mobile-cta-btn">
+                Download App
+              </button>
+            )}
           </div>
         </div>
       )}

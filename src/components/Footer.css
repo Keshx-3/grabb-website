@@ -1,186 +1,169 @@
 .footer {
-  background-color: var(--color-secondary);
-  color: #a3b8cc;
-  padding: var(--spacing-xl) 0 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #000000;
+  color: #8c8c8c;
+  /* Zomato uses muted light gray */
+  padding: 4rem 0 3rem 0;
+  border-top: none;
 }
 
-.footer-grid {
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.footer-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.footer-brand-logo {
+  display: block;
+}
+
+.footer-brand-logo img {
+  height: 90px;
+  /* Adjust size to match typical footer logo size */
+  width: auto;
+  object-fit: contain;
+  margin-left: -50px;
+  /* Pulled further left to offset large transparent padding inside the PNG file */
+}
+
+.footer-links-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr;
-  gap: var(--spacing-lg);
-  padding-bottom: var(--spacing-xl);
-}
-
-.footer-col h3 {
-  color: var(--color-white);
-  font-size: 1.1rem;
-  margin-bottom: var(--spacing-sm);
-  position: relative;
-  font-family: var(--font-body);
-  font-weight: 600;
-}
-
-.brand-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--color-white);
-  font-weight: 700;
-}
-
-.logo-icon-sm {
-  background: var(--color-primary);
-  color: var(--color-white);
-  padding: 0.4rem;
-  border-radius: var(--radius-xs);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.social-links {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--color-white);
-  transition: all var(--transition-fast);
-}
-
-.social-icon:hover {
-  background-color: var(--color-primary);
-  transform: translateY(-3px);
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.footer-links a {
-  font-size: 0.9rem;
-  color: #a3b8cc;
-}
-
-.footer-links a:hover {
-  color: var(--color-accent);
-  padding-left: 4px;
-}
-
-.footer-download-btn {
-  background: none;
-  border: none;
-  font-size: 0.9rem;
-  color: #a3b8cc;
-  padding: 0;
-  cursor: pointer;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   text-align: left;
-  transition: all var(--transition-fast);
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: inherit;
 }
 
-.footer-download-btn:hover {
-  color: var(--color-accent);
-  padding-left: 4px;
+.footer-col h4 {
+  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
 }
 
-.footer-contact-list {
+.footer-links-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.65rem;
 }
 
-.footer-contact-list li {
-  display: flex;
-  gap: 0.75rem;
+.footer-links-list span {
+  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #8c8c8c;
   font-size: 0.9rem;
+  font-weight: 400;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+.footer-links-list span:hover {
+  color: #ffffff;
+}
+
+/* Social Circles */
+.footer-social-circles {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.social-circle:hover {
+  transform: scale(1.15);
+  background-color: var(--color-accent);
+}
+
+.social-svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+/* App Badges in Footer - stacked vertically */
+.footer-app-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 145px;
   align-items: flex-start;
+  /* Prevent images from stretching */
+}
+
+.footer-badge-img {
+  width: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.footer-badge-img:hover {
+  transform: scale(1.05);
+}
+
+.footer-badge-img[src*="google-play-badge"] {
+  height: 44px;
+}
+
+.footer-badge-img[src*="app-store-badge"] {
+  height: 44px;
+  /* Visually match Google Play badge size */
+}
+
+/* Divider line */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #222222;
+  margin: 3rem 0 1.5rem 0;
+}
+
+/* Disclaimer info */
+.footer-disclaimer {
+  text-align: left;
+  font-size: 0.75rem;
+  color: #555555;
   line-height: 1.5;
 }
 
-.footer-contact-list a {
-  color: #a3b8cc;
-}
-
-.footer-contact-list a:hover {
-  color: var(--color-accent);
-}
-
-.contact-icon {
-  color: var(--color-accent);
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding: var(--spacing-sm) 0;
-  background-color: #0b1a2d;
-  font-size: 0.85rem;
-}
-
-.bottom-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.bottom-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.bottom-links a {
-  color: #71879c;
-}
-
-.bottom-links a:hover {
-  color: var(--color-accent);
-}
-
 @media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+  .footer-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .footer-grid {
+  .footer-links-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: 2rem;
   }
-  .bottom-container {
-    flex-direction: column;
-    text-align: center;
+
+  .footer-header {
+    justify-content: flex-start;
+  }
+
+  .footer-disclaimer {
+    text-align: left;
   }
 }

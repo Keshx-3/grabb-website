@@ -21,6 +21,27 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* Home page transparent navbar styling (over dark video hero) on desktop */
+@media (min-width: 769px) {
+  .navbar-home:not(.scrolled) .nav-logo {
+    color: var(--color-white);
+  }
+  .navbar-home:not(.scrolled) .logo-text {
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: var(--color-white);
+  }
+  .navbar-home:not(.scrolled) .nav-item {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .navbar-home:not(.scrolled) .nav-item:hover {
+    color: var(--color-white);
+  }
+  .navbar-home:not(.scrolled) .nav-item::after {
+    background-color: var(--color-accent);
+  }
+}
+
 .nav-container {
   display: flex;
   align-items: center;
