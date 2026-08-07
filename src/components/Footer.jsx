@@ -30,10 +30,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>About Grabb</h4>
             <ul className="footer-links-list">
-              <li><span>Who We Are</span></li>
-              <li><span>Work With Us</span></li>
-              <li><span>Report Fraud</span></li>
-              <li><span>Contact Us</span></li>
+              <li><Link to="/who-we-are" className="footer-link">Who We Are</Link></li>
+              <li><Link to="/work-with-us" className="footer-link">Work With Us</Link></li>
+              <li><Link to="/report-fraud" className="footer-link">Report Fraud</Link></li>
+              <li><Link to="/contact-us" className="footer-link">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -41,8 +41,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>For Merchants</h4>
             <ul className="footer-links-list">
-              <li><span>Partner With Us</span></li>
-              <li><span>Apps For You</span></li>
+              <li><Link to="/merchant-partner" className="footer-link">Partner With Us</Link></li>
+              <li><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="footer-link">Apps For You</a></li>
             </ul>
           </div>
 
@@ -50,8 +50,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>For Riders</h4>
             <ul className="footer-links-list">
-              <li><span>Partner With Us</span></li>
-              <li><span>Apps For You</span></li>
+              <li><Link to="/rider-partner" className="footer-link">Partner With Us</Link></li>
+              <li><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="footer-link">Apps For You</a></li>
             </ul>
           </div>
 
@@ -59,9 +59,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Learn More</h4>
             <ul className="footer-links-list">
-              <li><span>Privacy Policy</span></li>
-              <li><span>Security</span></li>
-              <li><span>Terms of Service</span></li>
+              <li><Link to="/privacy-policy" className="footer-link">Privacy Policy</Link></li>
+              <li><Link to="/security" className="footer-link">Security</Link></li>
+              <li><Link to="/terms-of-service" className="footer-link">Terms of Service</Link></li>
             </ul>
           </div>
 

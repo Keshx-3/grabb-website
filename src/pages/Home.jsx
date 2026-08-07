@@ -219,7 +219,7 @@ export default function Home() {
             We connect you directly with the neighborhood merchants you know and trust, bringing authentic store-counter shopping right to your doorstep.
           </p>
 
-          {/* Stats Capsule — Zomato style */}
+          {/* Stats Capsule, Zomato style */}
           <div className="trust-capsule-card">
             <div className="trust-capsule-item">
               <div className="capsule-stat-row">
@@ -258,7 +258,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section — Third Page */}
+      {/* Features Section, Third Page */}
       <section className="home-features-section" ref={featuresSectionRef}>
         <div className="features-section-container text-center reveal">
           <h2 className="features-section-title">
