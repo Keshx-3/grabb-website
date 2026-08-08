@@ -1259,8 +1259,24 @@
 
   .legal-toc {
     position: static;
-    display: none;
-    /* hide on mobile for simplicity */
+    /* Show a compact version on mobile instead of hiding */
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .legal-toc ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .legal-toc ul li a {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(31, 111, 178, 0.05);
+    border-radius: var(--radius-xs);
   }
 
   .security-layout {
@@ -1309,6 +1325,12 @@
 @media (max-width: 600px) {
   .info-hero {
     padding: 5rem 1.5rem 4rem;
+  }
+
+  /* Fix who-we-are hero excessive side padding on small screens */
+  .who-we-are-hero {
+    padding: 7rem 1.5rem 4rem;
+    min-height: 70vh;
   }
 
   .info-section {

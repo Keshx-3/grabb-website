@@ -200,3 +200,26 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 480px) {
+  .download-modal-body {
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  }
+
+  .download-modal-body h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .store-badges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-badge-btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* Brand Colors */
@@ -25,8 +25,8 @@
   --color-error-bg: #fee2e2;
 
   /* Typography */
-  --font-heading: 'Fraunces', Georgia, serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Lexend', system-ui, -apple-system, sans-serif;
+  --font-body: 'Lexend', system-ui, -apple-system, sans-serif;
   --font-lexend: 'Lexend', system-ui, -apple-system, sans-serif;
   
   /* Spacing */
@@ -299,5 +299,17 @@ button, input, select, textarea {
   }
   html {
     font-size: 15px;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    padding: 0 0.85rem;
   }
 }

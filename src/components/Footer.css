@@ -166,7 +166,13 @@
     justify-content: flex-start;
   }
 
+  /* Fix logo clipping off-screen on phones */
+  .footer-brand-logo img {
+    margin-left: -10px;
+  }
+
   .footer-disclaimer {
     text-align: left;
+    font-size: 0.8rem;
   }
 }

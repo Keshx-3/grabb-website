@@ -285,7 +285,7 @@ export default function Home() {
               <img src="/logo.png" alt="Grabb" className="phone-screen-logo" />
             </div>
 
-            {/* Swirling Orbit Tiles */}
+            {/* Swirling Orbit Tiles — also acts as mobile grid container */}
             <div className="feat-tile feat-tile-1">
               <div className="feat-tile-icon"><img src="/Reserve.png" alt="Reserve" /></div>
               <span>Reserve</span>
