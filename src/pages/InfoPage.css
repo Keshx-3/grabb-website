@@ -57,6 +57,41 @@
   padding: 5rem 2rem 4rem;
 }
 
+/* Who We Are — founder background image hero */
+.who-we-are-hero {
+  background-image:
+    linear-gradient(to bottom,
+      rgba(16, 30, 54, 0.60) 0%,
+      rgba(16, 30, 54, 0.75) 60%,
+      rgba(22, 50, 79, 0.92) 100%),
+    url('/vivek.png');
+  background-position: 0 0, 75% top;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  padding: 9rem 4rem 7rem;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.who-we-are-hero .info-hero-title {
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.who-we-are-hero .info-hero-subtitle {
+  font-size: 1.15rem;
+  max-width: 620px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .info-hero-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
@@ -244,12 +279,10 @@
 .value-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(16, 30, 54, 0.92) 0%,
-    rgba(16, 30, 54, 0.4) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(to top,
+      rgba(16, 30, 54, 0.92) 0%,
+      rgba(16, 30, 54, 0.4) 50%,
+      transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -258,12 +291,10 @@
 }
 
 .value-image-card:hover .value-image-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(16, 30, 54, 0.97) 0%,
-    rgba(16, 30, 54, 0.55) 60%,
-    transparent 100%
-  );
+  background: linear-gradient(to top,
+      rgba(16, 30, 54, 0.97) 0%,
+      rgba(16, 30, 54, 0.55) 60%,
+      transparent 100%);
 }
 
 .value-image-overlay h3 {
@@ -293,6 +324,7 @@
   .values-image-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .value-image-card {
     height: 320px;
   }
@@ -302,9 +334,11 @@
   .values-image-grid {
     grid-template-columns: 1fr;
   }
+
   .value-image-card {
     height: 260px;
   }
+
   .value-image-overlay p {
     max-height: none;
     opacity: 1;
@@ -340,13 +374,31 @@
   padding: 1.5rem 0;
 }
 
-.timeline-item.left .timeline-year { text-align: right; order: 1; }
-.timeline-item.left .timeline-dot { order: 2; }
-.timeline-item.left .timeline-content { order: 3; }
+.timeline-item.left .timeline-year {
+  text-align: right;
+  order: 1;
+}
 
-.timeline-item.right .timeline-content { order: 1; text-align: right; }
-.timeline-item.right .timeline-dot { order: 2; }
-.timeline-item.right .timeline-year { order: 3; }
+.timeline-item.left .timeline-dot {
+  order: 2;
+}
+
+.timeline-item.left .timeline-content {
+  order: 3;
+}
+
+.timeline-item.right .timeline-content {
+  order: 1;
+  text-align: right;
+}
+
+.timeline-item.right .timeline-dot {
+  order: 2;
+}
+
+.timeline-item.right .timeline-year {
+  order: 3;
+}
 
 .timeline-year {
   font-family: var(--font-heading);
@@ -463,8 +515,15 @@
 }
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .role-item {
@@ -700,7 +759,9 @@
   margin-bottom: 0.6rem;
 }
 
-.fraud-notice-card p:last-child { margin-bottom: 0; }
+.fraud-notice-card p:last-child {
+  margin-bottom: 0;
+}
 
 .fraud-checklist {
   padding-left: 1.2rem;
@@ -967,7 +1028,9 @@
   white-space: pre-wrap;
 }
 
-.legal-section p:last-child { margin-bottom: 0; }
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
 
 /* ---- Security Page ---- */
 .security-layout {
@@ -1078,10 +1141,25 @@
   letter-spacing: 0.04em;
 }
 
-.reward-badge.critical { background: #fee2e2; color: #dc2626; }
-.reward-badge.high { background: #ffedd5; color: #ea580c; }
-.reward-badge.medium { background: #fef9c3; color: #ca8a04; }
-.reward-badge.low { background: var(--color-bg-ice); color: var(--color-text-muted); }
+.reward-badge.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.reward-badge.high {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.reward-badge.medium {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.reward-badge.low {
+  background: var(--color-bg-ice);
+  color: var(--color-text-muted);
+}
 
 .reward-detail {
   font-size: 0.875rem;
@@ -1147,7 +1225,9 @@
   font-size: 0.875rem;
 }
 
-.security-sidebar-card ul li a::before { display: none; }
+.security-sidebar-card ul li a::before {
+  display: none;
+}
 
 .security-quick-report {
   background: linear-gradient(135deg, rgba(31, 111, 178, 0.05), rgba(127, 199, 232, 0.08));
@@ -1179,7 +1259,8 @@
 
   .legal-toc {
     position: static;
-    display: none; /* hide on mobile for simplicity */
+    display: none;
+    /* hide on mobile for simplicity */
   }
 
   .security-layout {
@@ -1207,10 +1288,22 @@
     display: none;
   }
 
-  .timeline-item.left .timeline-dot { order: 1; }
-  .timeline-item.left .timeline-content { order: 2; }
-  .timeline-item.right .timeline-dot { order: 1; }
-  .timeline-item.right .timeline-content { order: 2; text-align: left; }
+  .timeline-item.left .timeline-dot {
+    order: 1;
+  }
+
+  .timeline-item.left .timeline-content {
+    order: 2;
+  }
+
+  .timeline-item.right .timeline-dot {
+    order: 1;
+  }
+
+  .timeline-item.right .timeline-content {
+    order: 2;
+    text-align: left;
+  }
 }
 
 @media (max-width: 600px) {

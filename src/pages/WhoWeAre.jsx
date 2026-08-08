@@ -36,7 +36,7 @@ export default function WhoWeAre() {
     <>      <div className="info-page">
 
         {/* Hero */}
-        <section className="info-hero">
+        <section className="info-hero who-we-are-hero">
           <h1 className="info-hero-title">We're on a mission to<br /><span className="gradient-text">shop local, delivered fast.</span></h1>
           <p className="info-hero-subtitle">
             Grabb is the hyper-local delivery platform built for communities, connecting neighbourhood merchants with riders who care and customers who demand more.

@@ -141,9 +141,9 @@
 /* Grabb Logo in Bottom Right of Hero */
 .hero-corner-logo {
   position: absolute;
-  bottom: 2rem;
-  right: 3rem;
-  width: 190px;
+  bottom: 1.5rem;
+  right: -0.5rem;
+  width: 320px;
   /* Increased from 120px */
   height: auto;
   object-fit: contain;
@@ -754,13 +754,40 @@
 .home-features-section {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(180deg, #eef4ff 0%, #f8f4ff 35%, #ffffff 65%);
+  background: linear-gradient(160deg, #dbeafe 0%, #ede9fe 40%, #fdf4ff 70%, #ffffff 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   padding-bottom: 0;
+}
+
+/* Decorative floating orbs behind the radial layout */
+.home-features-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-features-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 111, 178, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .features-section-container {
@@ -773,7 +800,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.75rem;
+}
+
+.features-section-label {
+  display: inline-block;
+  background: rgba(31, 111, 178, 0.10);
+  color: var(--color-primary);
+  border: 1px solid rgba(31, 111, 178, 0.2);
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-lexend);
 }
 
 .features-section-title {
@@ -781,24 +823,25 @@
   font-size: 3.75rem;
   line-height: 1.15;
   font-weight: 900;
-  color: var(--color-primary);
-  /* same brand blue as 2nd page */
+  color: var(--color-secondary);
   text-align: center;
   margin: 0;
 }
 
+.features-section-title span {
+  color: var(--color-primary);
+}
+
 .features-section-desc {
   font-family: var(--font-lexend);
-  font-size: 1.25rem;
-  font-weight: 300;
-  /* same light weight as 2nd page */
-  line-height: 1.45;
-  color: #3B5878;
-  /* same muted slate blue as 2nd page */
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text-muted);
   letter-spacing: 0.01em;
   text-align: center;
-  max-width: 500px;
-  margin-bottom: 1.5rem;
+  max-width: 480px;
+  margin-bottom: 0.5rem;
 }
 
 /* ─── Main 3-column grid ─── */
@@ -830,9 +873,10 @@
 
 /* Individual feature tile — white rounded card */
 .feat-tile {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 6px 28px rgba(31, 111, 178, 0.10), 0 1px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   padding: 1rem 0.75rem 0.85rem;
   display: flex;
   flex-direction: column;
@@ -845,7 +889,8 @@
   top: 50%;
   left: 50%;
   z-index: 4;
-  /* sit above the phone */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   /* Swirl Animation initial state: hidden, tiny, spun around, at the phone center */
   opacity: 0;
@@ -996,16 +1041,31 @@
 }
 
 
-/* Download App Section — Zomato-style compact card */
+/* Download App Section — Premium card */
 .home-download-section {
   position: relative;
   min-height: 100vh;
-  background-color: var(--color-bg-ice);
+  background: linear-gradient(135deg, #0d1b2e 0%, #16324F 50%, #1a3f6b 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   padding: var(--spacing-xl) 0;
+}
+
+/* Subtle large orb behind the card */
+.home-download-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 111, 178, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .download-section-container {
@@ -1014,12 +1074,14 @@
   width: 100%;
 }
 
-/* The card itself — Grabb theme pale blue gradient */
+/* The card itself — dark premium glass */
 .download-app-card {
-  background: linear-gradient(135deg, #f0f5ff 0%, #f8faff 60%, #ffffff 100%);
-  border-radius: 28px;
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  box-shadow: 0 8px 32px rgba(22, 50, 79, 0.06);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -1027,11 +1089,9 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 3.5rem 0 0 3.5rem;
-  /* padding right/bottom handled differently to let phone overflow */
   position: relative;
   overflow: hidden;
-  /* clips the phone at the bottom */
-  min-height: 400px;
+  min-height: 420px;
 }
 
 /* Decorative concentric circles SVG */
@@ -1044,6 +1104,7 @@
   height: 500px;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.4;
 }
 
 /* Left column */
@@ -1058,17 +1119,17 @@
 }
 
 .download-card-content h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  color: var(--color-secondary);
-  line-height: 1.2;
+  color: #ffffff;
+  line-height: 1.15;
 }
 
 .download-card-content p {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.65);
   max-width: 340px;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 

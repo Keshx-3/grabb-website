@@ -262,7 +262,7 @@ export default function Home() {
       <section className="home-features-section" ref={featuresSectionRef}>
         <div className="features-section-container text-center reveal">
           <h2 className="features-section-title">
-            What's waiting for you <br /> on the app?
+            What's waiting for you <br /> <span>on the app?</span>
           </h2>
           <p className="features-section-desc">
             Our app is packed with features that enable you to experience grocery delivery like never before
@@ -334,7 +334,7 @@ export default function Home() {
 
             {/* Left Column: Text & Badges */}
             <div className="download-card-content">
-              <h2>Download the app now!</h2>
+              <h2>Get the <span style={{color: 'var(--color-accent)'}}>Grabb</span> app!</h2>
               <p>Experience seamless online ordering only on the Grabb app</p>
 
               <div className="download-card-badges">
