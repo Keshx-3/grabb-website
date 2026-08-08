@@ -7,6 +7,16 @@
   padding-top: 0;
   min-height: 100vh;
   background-color: var(--color-white);
+  font-family: var(--font-lexend);
+}
+
+.info-page h1,
+.info-page h2,
+.info-page h3,
+.info-page h4,
+.info-page h5,
+.info-page h6 {
+  font-family: var(--font-lexend);
 }
 
 /* ---- Hero ---- */

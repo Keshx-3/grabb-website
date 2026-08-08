@@ -1,5 +1,6 @@
 .home-page {
   padding-top: 0;
+  font-family: var(--font-lexend);
 }
 
 /* Hero Section with Video Background */
@@ -80,7 +81,7 @@
 }
 
 .hero-content h1 {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   font-size: 3.2rem;
   line-height: 1.2;
   color: var(--color-white);
@@ -437,7 +438,7 @@
 }
 
 .trust-section-title {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   font-size: 3.75rem;
   /* ~60px */
   line-height: 1.15;
@@ -446,7 +447,7 @@
 }
 
 .trust-section-desc {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   font-size: 1.25rem;
   /* ~20px */
   font-weight: 300;
@@ -498,7 +499,7 @@
   font-weight: 800;
   color: #2d3748;
   line-height: 1;
-  font-family: 'Sofia Pro', 'Inter', system-ui, sans-serif;
+  font-family: var(--font-lexend);
 }
 
 /* Label below the row */
@@ -776,7 +777,7 @@
 }
 
 .features-section-title {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   font-size: 3.75rem;
   line-height: 1.15;
   font-weight: 900;
@@ -787,7 +788,7 @@
 }
 
 .features-section-desc {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   font-size: 1.25rem;
   font-weight: 300;
   /* same light weight as 2nd page */

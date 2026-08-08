@@ -39,7 +39,7 @@
 }
 
 .footer-col h4 {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -59,7 +59,7 @@
 
 .footer-links-list span,
 .footer-links-list .footer-link {
-  font-family: 'Sofia Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend);
   color: #8c8c8c;
   font-size: 0.9rem;
   font-weight: 400;
