@@ -166,7 +166,7 @@ export default function Home() {
         </div>
 
         {/* Grabb Logo in Bottom Right */}
-        <img src="/logo.png" alt="Grabb Logo" className="hero-corner-logo" />
+        {/* <img src="/logo.png" alt="Grabb Logo" className="hero-corner-logo" /> */}
 
         {/* Floating Scroll Down Arrow */}
         <div className="hero-scroll-down reveal" onClick={scrollToNextSection}>

@@ -31,7 +31,7 @@ export default function Footer() {
             <h4>About Grabb</h4>
             <ul className="footer-links-list">
               <li><Link to="/who-we-are" className="footer-link">Who We Are</Link></li>
-              <li><Link to="/work-with-us" className="footer-link">Work With Us</Link></li>
+              {/* <li><Link to="/work-with-us" className="footer-link">Work With Us</Link></li> */}
               <li><Link to="/report-fraud" className="footer-link">Report Fraud</Link></li>
               <li><Link to="/contact-us" className="footer-link">Contact Us</Link></li>
             </ul>

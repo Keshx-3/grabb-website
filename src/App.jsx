@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 
 // Pages
@@ -45,6 +46,7 @@ export default function App() {
       <TitleUpdater />
       <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <div className="main-content" style={{ flexGrow: 1 }}>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             {/* About Grabb */}
