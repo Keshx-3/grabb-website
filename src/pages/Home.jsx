@@ -25,11 +25,9 @@ export default function Home() {
     // Progress 0 = section bottom just hits viewport bottom
     // Progress 1 = section top aligned with viewport top
     const items = [
-      ['.trust-float-burger', 0.18],
-      ['.trust-float-dumplings', 0.42],
-      ['.trust-float-pizza', 0.63],
-      ['.trust-float-dot1', 0.50],
-      ['.trust-float-dot2', 0.55],
+      ['.trust-float-dumplings', 0.10],  // headphone — first
+      ['.trust-float-burger', 0.45],     // milk — second
+      ['.trust-float-pizza', 0.63]     // broccoli — third
     ];
 
     const handleScroll = () => {
@@ -178,15 +176,37 @@ export default function Home() {
       {/* Trust & Philosophy Section (Second Fold) */}
       <section className="home-trust-section" ref={trustSectionRef}>
 
-        {/* Decorative SVG Curves */}
-        <svg className="trust-curve trust-curve-left" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M280 20 C200 80, 50 120, 80 220 C110 320, 260 340, 200 400" stroke="#ef4444" strokeWidth="1.5" strokeOpacity="0.2" fill="none" />
-          <path d="M260 0 C180 60, 30 100, 60 200 C90 300, 240 320, 180 400" stroke="#ef4444" strokeWidth="1" strokeOpacity="0.12" fill="none" />
+        {/* Decorative flowing lines — gently swirl through each image */}
+        <svg
+          className="trust-section-paths"
+          viewBox="0 0 1400 900"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* LEFT: flows in from top-left, swirls through milk (195, 305), exits bottom-left */}
+          <path
+            d="M 30 -50
+               C 110 90, 330 190, 195 305
+               C 60 420, 10 650, 10 960"
+            fill="none"
+            stroke="#1F6FB2"
+            strokeWidth="1.5"
+            strokeOpacity="0.25"
+          />
+          {/* RIGHT: flows in from top-right, through headphone (1230,145), through broccoli (1232,626), exits bottom-right */}
+          <path
+            d="M 1420 -50
+               C 1380 60, 1100 90, 1230 145
+               C 1360 200, 1380 500, 1232 626
+               C 1084 752, 1380 900, 1450 960"
+            fill="none"
+            stroke="#1F6FB2"
+            strokeWidth="1.5"
+            strokeOpacity="0.25"
+          />
         </svg>
-        <svg className="trust-curve trust-curve-right" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 20 C100 80, 250 120, 220 220 C190 320, 40 340, 100 400" stroke="#ef4444" strokeWidth="1.5" strokeOpacity="0.2" fill="none" />
-          <path d="M40 0 C120 60, 270 100, 240 200 C210 300, 60 320, 120 400" stroke="#ef4444" strokeWidth="1" strokeOpacity="0.12" fill="none" />
-        </svg>
+
+
 
         {/* Floating Product Cut-out Images */}
         <div className="trust-float trust-float-burger">
@@ -260,6 +280,28 @@ export default function Home() {
 
       {/* Features Section, Third Page */}
       <section className="home-features-section" ref={featuresSectionRef}>
+        {/* Bottom-left decorative rider image */}
+        <img src="/Grabb rider.png" alt="Grabb Rider" className="features-corner-img features-corner-left" />
+        {/* Bottom-right decorative person image */}
+        <img src="/Person.png" alt="Person" className="features-corner-img features-corner-right features-corner-person" />
+
+        {/* Animated dashed delivery path from rider to person */}
+        <svg
+          className="features-delivery-path"
+          viewBox="0 0 1400 180"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="deliveryRoute"
+            className="delivery-path-line"
+            d="M 280 110 C 500 35, 950 35, 1240 125"
+            fill="none"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+        </svg>
+
         <div className="features-section-container text-center reveal">
           <h2 className="features-section-title">
             What's waiting for you <br /> <span>on the app?</span>
@@ -334,7 +376,7 @@ export default function Home() {
 
             {/* Left Column: Text & Badges */}
             <div className="download-card-content">
-              <h2>Get the <span style={{color: 'var(--color-accent)'}}>Grabb</span> app!</h2>
+              <h2>Get the <span style={{ color: 'var(--color-accent)' }}>Grabb</span> app!</h2>
               <p>Experience seamless online ordering only on the Grabb app</p>
 
               <div className="download-card-badges">
