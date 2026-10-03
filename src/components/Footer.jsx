@@ -61,7 +61,7 @@ export default function Footer() {
             <ul className="footer-links-list">
               <li><Link to="/privacy-policy" className="footer-link">Privacy Policy</Link></li>
               <li><Link to="/security" className="footer-link">Security</Link></li>
-              <li><Link to="/terms-of-service" className="footer-link">Terms of Service</Link></li>
+              <li><Link to="/terms-and-conditions" className="footer-link">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -123,7 +123,7 @@ export default function Footer() {
         {/* Bottom copyright warning */}
         <div className="footer-disclaimer">
           <p>
-            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2026 © Grabb Ltd. All rights reserved.
+            By continuing past this page, you agree to our <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>, Cookie Policy, <Link to="/privacy-policy">Privacy Policy</Link> and Content Policies. All trademarks are properties of their respective owners. 2026 © Grabb Ltd. All rights reserved.
           </p>
         </div>
 

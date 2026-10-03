@@ -127,7 +127,7 @@ export default function Security() {
                 <h3>📌 Quick Links</h3>
                 <ul>
                   <li><a href="/privacy-policy">Privacy Policy</a></li>
-                  <li><a href="/terms-of-service">Terms of Service</a></li>
+                  <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
                   <li><a href="/contact-us">Contact Support</a></li>
                 </ul>
               </div>

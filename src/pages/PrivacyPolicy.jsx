@@ -73,7 +73,7 @@ We use this information in accordance with the data sharing agreements we have w
 • Comply with legal obligations
 • Improve our services through analytics and research
 • Send promotional communications (where you have consented)
-• Resolve disputes and enforce our Terms of Service`
+• Resolve disputes and enforce our Terms and Conditions`
   },
   {
     id: 'how-share',

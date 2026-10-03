@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
@@ -14,7 +14,7 @@ import MerchantPartner from './pages/MerchantPartner';
 import RiderPartner from './pages/RiderPartner';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Security from './pages/Security';
-import TermsOfService from './pages/TermsOfService';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 const PAGE_TITLES = {
   '/': 'Grabb, Shop Local. Delivered.',
@@ -26,7 +26,7 @@ const PAGE_TITLES = {
   '/rider-partner': 'Partner With Us, Grabb Riders',
   '/privacy-policy': 'Privacy Policy, Grabb',
   '/security': 'Security, Grabb',
-  '/terms-of-service': 'Terms of Service, Grabb',
+  '/terms-and-conditions': 'Terms & Conditions, Grabb',
 };
 
 function TitleUpdater() {
@@ -61,7 +61,8 @@ export default function App() {
             {/* Learn More */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/security" element={<Security />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/terms-of-service" element={<Navigate to="/terms-and-conditions" replace />} />
             {/* Fallback */}
             <Route path="*" element={<Home />} />
           </Routes>
