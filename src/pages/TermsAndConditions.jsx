@@ -219,7 +219,6 @@ export default function TermsAndConditions() {
     <div className="info-page">
       {/* Hero */}
       <section className="info-hero info-hero-sm">
-        <span className="info-hero-badge">Customer Agreement</span>
         <h1 className="info-hero-title">Terms & Conditions</h1>
         <p className="info-hero-subtitle">
           Grabb Customer Mobile Application (“User App”)
